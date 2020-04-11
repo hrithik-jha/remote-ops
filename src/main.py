@@ -13,6 +13,8 @@ fileType = '.png'
 
 @app.route('/')
 def home():
+    tasks.schedule(0)
+    print("Calling scheduler")
     return "Server is listening..."
 
 @app.route('/upload', methods=['GET', 'POST'])
@@ -27,4 +29,5 @@ def index():
     elif request.method == 'GET':
         print("No GET Method yet")
 
-app.run()
+if __name__ == '__main__':
+    app.run()

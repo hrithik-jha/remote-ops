@@ -4,7 +4,7 @@ import os
 import requests
 #import thread, winsound
 
-def detect():
+def detect(id):
     face_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_default.xml')
     eye_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_eye.xml')
 
@@ -13,7 +13,7 @@ def detect():
     It's intended as a convenience. Since your images aren't numbered like that, it's no longer a convenient to use VideoCapture. 
     Simply use glob to get a list of files, sort it if necessary, and read the frames with imread in a loop.
     '''
-
+    print("Task executed succesfully")
     count = 0
     iters = 0
     gCount = 0
@@ -21,7 +21,7 @@ def detect():
     #cam = cv2.VideoCapture(0)
 
     while(True):
-        files = os.listdir('C://Users//Hrithik Jha//drowsyAPI//img')
+        files = os.listdir('../img')
         if len(files) == 0:
             continue
         elif len(files) == gCount:
