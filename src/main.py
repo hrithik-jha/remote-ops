@@ -21,6 +21,7 @@ def home():
 def index():
     if request.method == 'POST':
         fileRec = request.files['image']
+        #Extracted ID can be used to store in individual folders
         name = imgLoc + str(tools.files.imgName()) + fileType
         fileRec.save(name)
         #Insert ID as argument if data being received should be personalised
