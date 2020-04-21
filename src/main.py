@@ -42,7 +42,7 @@ def index():
                 return "Error: No Id field provided."
         '''
         prediction = tasks.schedule(id)
-
+        return prediction
 
 if __name__ == '__main__':
     app.run()

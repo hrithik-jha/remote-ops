@@ -11,7 +11,6 @@ def sendImage(i):
     response = requests.post(URL, files=multipart_form_data)
     print(response)
 
-    
 
 
 # Create Loop to send stream

@@ -2,12 +2,22 @@ import threading
 import components.mid as task1
 from multiprocessing import Process
 
+'''
+tasks = [
+    task1(),
+    task2(),
+    task3()
+]
+'''
+
+
 def schedule(id=-1):
     # Task 1
     # Task 2 task1.task() // for non-thread workflow
     if id != -1:
-        thread = Process(target=task1.task, args=(id))
+        prediction = task1.task(id)
         # Other thread/id related tasks
+        return prediction
     else:
         thread = Process(target=task1.task, args=())
     print("Starting thread")
