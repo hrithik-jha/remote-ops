@@ -17,6 +17,7 @@ def home():
     print("Calling scheduler")
     return "Server is listening..."
 
+# For media/files
 @app.route('/upload', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -29,6 +30,19 @@ def index():
         return "File Saved"
     elif request.method == 'GET':
         print("No GET Method yet")
+
+# For standard HTTP requests
+@app.route('/upload', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        '''
+            if 'id' in request.args:
+                id = request.args.get('id')
+            else:
+                return "Error: No Id field provided."
+        '''
+        prediction = tasks.schedule(id)
+
 
 if __name__ == '__main__':
     app.run()
