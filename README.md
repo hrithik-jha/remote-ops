@@ -10,3 +10,6 @@ Just send the ID as a parameter and modify the `imgName()` path to accomodate im
 
 ## Running
 The program uses to threads to perform multiple tasks concurrently on the data. If an order has to be followed, simply remove the thread function and call the functions in the order required in `src/tasks.py`.
+
+## Client
+`client.py` is a template file which can be used in the program calling the remote-ops server.
