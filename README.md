@@ -9,4 +9,4 @@ The server also ID as parameter if the data being received is to be personalised
 Just send the ID as a parameter and modify the `imgName()` path to accomodate image changes.
 
 ## Running
-The program uses to threads to perform multiple tasks concurrently on the data. If an order has to be followed, simply remove the thread function and call the functions in the order required in `src/tasks.py`.\
+The program uses to threads to perform multiple tasks concurrently on the data. If an order has to be followed, simply remove the thread function and call the functions in the order required in `src/tasks.py`.
