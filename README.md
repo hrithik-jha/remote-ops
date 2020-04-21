@@ -1,7 +1,7 @@
 # Remote Ops: A server ML pipeline
 
 ## What?
-A framework boilerplate to use when requiring a server to perform remote ML tasks. Add the required the files in `src/components` and create the pipeline workflow in `src/tasks.py` .\
+A framework boilerplate to use when requiring a server to perform remote ML tasks. Add the required the files in `src/components` and create the pipeline workflow in `src/tasks.py` .
 
 ## Setting Up
 By default, the server is set up receive images. The type can be changed from inside `src/main.py`.\
