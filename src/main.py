@@ -13,8 +13,6 @@ fileType = '.png'
 
 @app.route('/')
 def home():
-    tasks.schedule(0)
-    print("Calling scheduler")
     return "Server is listening..."
 
 # For media/files
@@ -22,7 +20,7 @@ def home():
 def index():
     if request.method == 'POST':
         fileRec = request.files['image']
-        #Extracted ID can be used to store in individual folders
+        #Extracted ID can be used to store in individual folders = imgLoc + "/" + ID + "/" + str(tools.files.imgName()) + fileType
         name = imgLoc + str(tools.files.imgName()) + fileType
         fileRec.save(name)
         #Insert ID as argument if data being received should be personalised
@@ -32,8 +30,8 @@ def index():
         print("No GET Method yet")
 
 # For standard HTTP requests
-@app.route('/upload', methods=['GET', 'POST'])
-def index():
+@app.route('/bruh', methods=['GET', 'POST'])
+def predict():
     if request.method == 'POST':
         '''
             if 'id' in request.args:

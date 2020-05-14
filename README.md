@@ -15,4 +15,4 @@ The program uses to threads to perform multiple tasks concurrently on the data. 
 `client.py` is a template file which can be used in the program calling the remote-ops server.
 
 ### To Do:
-- [ ] Make process more automative 
+- [ ] Make task queue distributed
